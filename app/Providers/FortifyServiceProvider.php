@@ -47,9 +47,8 @@ class FortifyServiceProvider extends ServiceProvider
             return view('pages.auth.auth-login');
         });
 
-        Fortify::registerView(function(){
+        Fortify::registerView(function () {
             return view('pages.auth.auth-register');
-
         });
     }
 }
