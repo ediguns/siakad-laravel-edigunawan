@@ -53,7 +53,12 @@
                 </div>
                 <div class="form-group">
                     <label for="password2" class="d-block">Password Confirmation</label>
-                    <input id="password2" type="password" class="form-control" name="password_confirmation">
+                    <input id="password2" type="password" class="form-control @error('password2') is-invalid @enderror" name="password_confirmation">
+                    @error('password2')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
 
 
@@ -70,6 +75,9 @@
                     </button>
                 </div>
             </form>
+            <div class="text-muted mt-5 text-center">
+                I have an account! <a href="{{ route('login') }}">Login</a>
+            </div>
         </div>
     </div>
 @endsection

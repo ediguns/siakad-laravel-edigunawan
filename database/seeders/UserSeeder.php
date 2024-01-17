@@ -20,7 +20,8 @@ class UserSeeder extends Seeder
             'name' => 'Edi Gunawan Admin',
             'email' => 'gunawan.eddy1@gmail.com',
             'email_verified_at'=> now(),
-            'password' => Hash::make('123456'),
+            'password' => Hash::make('12345678'),
+            'roles' => 'mahasiswa',
         ]);
     }
 }
